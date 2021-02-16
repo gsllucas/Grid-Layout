@@ -1,0 +1,306 @@
+* {
+    font-family: 'Product Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-areas: 
+        "header header header"
+        "sidenav content anuncios"
+        "footer footer footer"
+    ;
+}
+
+/* Header */
+
+.header {
+    grid-area: header;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+#logo {
+    max-width: 200px;
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.125em;
+    background: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    transition: 0.2s;
+
+}
+
+.header li + li {
+    margin-left: 30px;
+}
+
+.header nav a:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+/* Sidenav */
+
+.sidenav {
+    grid-area: sidenav;
+    background: #fafbfc;
+    padding: 30px;
+}
+
+.sidenav li a {
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin: 0 auto 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 0px;
+    transition: 0.2s ease-out;
+}
+
+.sidenav li a:hover {
+    background: #b07dfb;
+}
+
+/* CONTENT */
+
+.content {
+    grid-area: content;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.col-wide {
+    grid-column: 1 / -1; /* item ocupa todo o espaço da coluna */
+}
+
+#imagem-1 {
+    grid-row: span 2; /* diz para ocupar a quantidade de linhas, sem especificar a onde começa */
+    align-self: end;
+}
+
+#imagem-2 {
+    align-self: end;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.7);
+}
+
+.informacaoes p + p {
+    margin-top: 30px;
+}
+
+.titulo {
+    color: #b07dfb;
+}
+
+.titulo h1 {
+    font-size: 3.75em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.titulo span {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.caracteristicas {
+    display: flex;
+    align-items: flex-start;
+}
+
+.caracteristicas div {
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 0px #551a8b;
+}
+
+.caracteristicas div:first-child {
+    margin-right: 30px;
+}
+
+.numero {
+    font-size: 3em;
+    line-height: 1;
+    margin: 10px auto;
+}
+
+.rotulo {
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+}
+
+.caracteristicas span {
+    display: block;
+    color: #b07dfb;
+}
+
+.citacao, .atributos {
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 0px #551a8b;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    color: #fff;
+}
+
+.citacao p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    color: #fff;
+}
+
+.atributos li {
+    border-bottom: 2px solid;
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 30px 0;
+}
+
+.atributos li:first-child {
+padding-top: 0px;
+}
+
+/* ANUNCIOS */
+
+.anuncios {
+    grid-area: anuncios;
+    background: #fafbfc;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    text-align: center;
+    padding: 30px;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.modal-contato {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 3px 3px 3px 0px #551a8b;
+    border-radius: 5px;
+    color: #b07dfb;
+    position: relative;
+}
+
+.modal-contato label {
+    display: block;
+    font-size: 1.5em;
+}
+
+.modal-container label {
+    margin: 1rem 0;
+}
+
+.modal-contato input {
+    padding: 20px;
+    font-size: 1.5em;
+    color: rgba(0,0,0,0.7);
+}
+
+#fechar {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 10px 15px;
+    color: #fff;
+    background: #b07dfb;
+    border: 3px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#fechar:hover {
+    background: #551a8b;
+}
+
+#enviar {
+    display: block;
+    background: #b07dfb;
+    border: 3px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #fff;
+    padding: 20px 40px;
+    margin-top: 1rem;
+    font-size: 1.5em;
+    transition: 0.1s;
+}
+
+#enviar:hover {
+    background: #551a8b;
+}
+
+#mensagem {
+    padding: 20px;
+    font-size: 1.5em;
+    width: 100%;
+}

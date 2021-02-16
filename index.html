@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/small.css">
+    <title>Wild Beast - Grid Layout</title>
+</head>
+<body>
+    <div class="grid">
+        <header class="header">
+            <a id="logo" href="#"><img src="img/wildbeast.svg" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Animais</a></li>
+                    <li><a id="contato" href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="sidenav">
+            <ul>
+                <li><a href=""><img src="img/icones/cervo.svg" alt=""></a></li>
+                <li><a href=""><img src="img/icones/leao.svg" alt=""></a></li>
+                <li><a href=""><img src="img/icones/gato.svg" alt=""></a></li>
+                <li><a href=""><img src="img/icones/vaca.svg" alt=""></a></li>
+                <li><a href=""><img src="img/icones/abelha.svg" alt=""></a></li>
+            </ul>
+        </div>
+        <main class="content">
+            <div class="titulo">
+                <h1>Lobo cinza</h1>
+                <span>da família canis lupus</span>
+            </div>
+            <div class="caracteristicas">
+                <div>
+                    <span class="numero">72</span>
+                    <span class="rotulo">kg</span>
+                </div>
+                <div>
+                    <span class="numero">13</span>
+                    <span class="rotulo">age</span>
+                </div>
+            </div>
+
+            <p class="col-wide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus aspernatur modi exercitationem labore rerum? Adipisci saepe labore iusto consectetur facilis. In doloremque, fugit quia inventore autem necessitatibus ex ut laboriosam.</p>
+
+            <img id="imagem-1" src="img/wolf1.jpg" alt="">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum nam cum officiis itaque. Sapiente vero maxime ullam quod iste, provident beatae laborum. Commodi labore expedita vero provident a distinctio?</p>
+
+            <img id="imagem-2" src="img/wolf2.jpg" alt="">
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime tenetur facere sed dolorum assumenda dolorem culpa ad incidunt, nemo fugiat suscipit voluptatem veritatis nisi doloremque ut deleniti. Quidem, sed maiores.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit facilis ipsam distinctio velit id maxime saepe nemo! Mollitia vel error ipsa, eaque, molestiae sapiente harum, dolorum aspernatur voluptates repudiandae velit!</p>
+        
+            <blockquote class="citacao col-wide">
+                <p>"Há algo no uivar do lobo que tira um homem do aqui e agora e o tranposrta para uma floresta da mente"</p>
+            </blockquote>
+
+            <ul class="atributos">
+                <li>Surgiu: 12.000 A.C</li>
+                <li>Tipo: Mamífero</li>
+                <li>Idade Média: 13 anos</li>
+                <li>Macho adulto: 80kg</li>
+                <li>Fêmea adulta: 55kg</li>
+                <li>Família: Lupus</li>
+            </ul>
+
+
+            <div class="informacoes">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ipsam consectetur. Soluta sunt eveniet officiis laudantium sit voluptate quisquam, blanditiis veritatis nam quod consequuntur aspernatur quae facilis repudiandae, nesciunt qui!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cupiditate fuga expedita fugit itaque officia laborum consequuntur est voluptate, iste quidem similique excepturi. Soluta sapiente ut architecto totam temporibus accusantium!</p>
+            </div>
+
+            <img class="col-wide" src="img/wolf3.jpg" alt="">
+
+        </main>
+        <aside class="anuncios">
+            <div class="anuncio-item"><img src="img/anuncio-1.jpg" alt=""></div>
+            <div class="anuncio-item"><img src="img/anuncio-2.jpg" alt=""></div>
+        </aside>
+
+        <footer class="footer">
+            <p>Template do Projeto Wild Beast<br>do curso de Grid Layout da Origamid</p>
+            <p><br>Lucas G. Silva - 2021</p>
+        </footer>
+
+
+    </div>
+    
+    <div class="modal-contato">
+        <div class="modal-container">
+            <button id="fechar">X</button>
+            <label>Nome</label>
+            <input type="text" placeholder="Seu nome">
+            <label>E-mail</label>
+            <input type="email" placeholder="Seu e-mail">
+            <label for="">Sua Mensagem</label>
+            <textarea name="" id="mensagem"placeholder="Deixe sua Mensagem"></textarea>
+            <button id="enviar" type="submit">Enviar</button>
+        </div>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
